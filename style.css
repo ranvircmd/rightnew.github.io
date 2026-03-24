@@ -1,12 +1,11 @@
 /* ============================================================
-   KREATAL MOCEAN - PROFESSIONAL STYLESHEET
+   KREATAL MOCEAN - PROFESSIONAL STYLESHEET (Teal-Navy Theme)
    Version: 1.0.0
    Author: Kreatal Mocean Development Team
-   Primary Color: #0b3d91
-   Accent Color: #ff9800
+   Primary Color: #1F3A5F
+   Accent Color: #F4A623
    Font: Poppins
    ============================================================ */
-
 /* ============================================================
    TABLE OF CONTENTS
    ============================================================
@@ -29,22 +28,27 @@
    17. Animations & Keyframes
    18. Responsive Design
    ============================================================ */
-
 /* ============================================================
    1. CSS VARIABLES / CUSTOM PROPERTIES
    ============================================================ */
 :root {
-    /* Primary Colors */
-    --primary-color: #0b3d91;
-    --primary-dark: #082a66;
-    --primary-light: #1a5bc4;
-    --primary-rgb: 11, 61, 145;
+    /* Primary Colors - Dark Blue Branding */
+    --primary-color: #1F3A5F;
+    --primary-dark: #0D2A4A;
+    --primary-light: #2d5080;
+    --primary-rgb: 31, 58, 95;
     
-    /* Accent Colors */
-    --accent-color: #ff9800;
-    --accent-dark: #e68900;
-    --accent-light: #ffad33;
-    --accent-rgb: 255, 152, 0;
+    /* Secondary / Teal Colors */
+    --teal-color: #1FA6A0;
+    --teal-dark: #178a84;
+    --teal-light: #5CC4BE;
+    --teal-rgb: 31, 166, 160;
+    
+    /* Accent Colors - Orange/Yellow CTA */
+    --accent-color: #F4A623;
+    --accent-dark: #d4891a;
+    --accent-light: #f7bc52;
+    --accent-rgb: 244, 166, 35;
     
     /* Neutral Colors */
     --white: #ffffff;
@@ -61,16 +65,16 @@
     --gray-900: #111827;
     
     /* Semantic Colors */
-    --success-color: #10b981;
+    --success-color: #1FA6A0;
     --warning-color: #f59e0b;
     --error-color: #ef4444;
     --info-color: #3b82f6;
     
     /* Background Colors */
     --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-tertiary: #f1f5f9;
-    --bg-dark: #0b3d91;
+    --bg-secondary: #f0fafa;
+    --bg-tertiary: #e4f5f4;
+    --bg-dark: #1F3A5F;
     
     /* Text Colors */
     --text-primary: #1f2937;
@@ -129,8 +133,8 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --shadow-primary: 0 10px 40px rgba(11, 61, 145, 0.3);
-    --shadow-accent: 0 10px 40px rgba(255, 152, 0, 0.3);
+    --shadow-primary: 0 10px 40px rgba(31, 58, 95, 0.3);
+    --shadow-accent: 0 10px 40px rgba(244, 166, 35, 0.3);
     
     /* Transitions */
     --transition-fast: 0.15s ease;
@@ -155,7 +159,6 @@
     --header-height: 80px;
     --header-height-mobile: 70px;
 }
-
 /* ============================================================
    2. RESET & BASE STYLES
    ============================================================ */
@@ -166,7 +169,6 @@
     margin: 0;
     padding: 0;
 }
-
 html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
@@ -339,7 +341,7 @@ small {
     display: block;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--primary-color), #1FA6A0);
     border-radius: var(--radius-full);
     margin: var(--spacing-md) auto 0;
 }
@@ -397,7 +399,7 @@ small {
 
 /* Primary Button */
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     box-shadow: var(--shadow-md);
 }
@@ -517,7 +519,7 @@ small {
 }
 
 .logo-img {
-    height: 60px;
+    height: 50px;
     width: auto;
 }
 
@@ -651,7 +653,7 @@ small {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #f0fafa 0%, #d4f0ef 100%);
     z-index: -2;
 }
 
@@ -757,7 +759,7 @@ small {
 
 .hero-title .highlight {
     display: block;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -886,7 +888,7 @@ small {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: var(--radius-md);
     font-size: var(--font-size-base);
@@ -1006,7 +1008,7 @@ small {
     justify-content: center;
     width: 120px;
     height: 120px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: 50%;
     box-shadow: var(--shadow-primary);
@@ -1179,7 +1181,7 @@ small {
 }
 
 .service-card:hover .service-icon {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
 }
 
@@ -1422,7 +1424,7 @@ small {
 }
 
 .info-card:hover .info-icon {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
 }
 
@@ -1458,7 +1460,7 @@ small {
    14. FOOTER
    ============================================================ */
 .footer {
-    background: var(--gray-900);
+    background: var(--primary-dark);
     color: var(--text-white);
 }
 
@@ -1676,7 +1678,7 @@ small {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: 50%;
     font-size: var(--font-size-lg);
@@ -2246,8 +2248,8 @@ small {
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
     :root {
-        --primary-color: #003366;
-        --accent-color: #cc7a00;
+        --primary-color: #0D2A4A;
+        --accent-color: #d4891a;
         --text-primary: #000000;
         --text-secondary: #333333;
     }
@@ -2461,7 +2463,7 @@ small {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: var(--radius-md);
     font-size: var(--font-size-xl);
@@ -2924,7 +2926,7 @@ small {
 }
 
 .value-item:hover .value-icon {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
 }
 
@@ -2969,7 +2971,7 @@ small {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--primary-color), #1FA6A0);
     transform: scaleX(0);
     transform-origin: left;
     transition: var(--transition-normal);
@@ -3005,7 +3007,7 @@ small {
 }
 
 .choose-card:hover .choose-icon {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
 }
 
@@ -3422,7 +3424,7 @@ small {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: var(--radius-xl);
     font-size: var(--font-size-2xl);
@@ -3443,11 +3445,11 @@ small {
 }
 
 .service-detail-badge.trending {
-    background: linear-gradient(135deg, #10b981, #34d399);
+    background: linear-gradient(135deg, #5CC4BE, #1FA6A0);
 }
 
 .service-detail-badge.social {
-    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    background: linear-gradient(135deg, #1FA6A0, #5CC4BE);
 }
 
 .service-detail-badge.corporate {
@@ -3692,7 +3694,7 @@ small {
 }
 
 .service-comparison-card:hover .scc-icon {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
 }
 
@@ -4233,7 +4235,7 @@ small {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: var(--radius-md);
     font-size: var(--font-size-xl);
@@ -4362,7 +4364,7 @@ small {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: 50%;
     font-size: var(--font-size-2xl);
@@ -4370,11 +4372,11 @@ small {
 }
 
 .category-icon.ngo {
-    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    background: linear-gradient(135deg, #1FA6A0, #5CC4BE);
 }
 
 .category-icon.education {
-    background: linear-gradient(135deg, #10b981, #34d399);
+    background: linear-gradient(135deg, #5CC4BE, #1FA6A0);
 }
 
 .category-icon.professional {
@@ -4944,7 +4946,7 @@ small {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: 50%;
     font-size: var(--font-size-2xl);
@@ -5002,7 +5004,7 @@ small {
     align-items: center;
     gap: var(--spacing-xs);
     padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     font-size: var(--font-size-sm);
     font-weight: var(--font-medium);
@@ -5181,7 +5183,7 @@ small {
     align-items: center;
     gap: var(--spacing-sm);
     padding: var(--spacing-lg);
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
 }
 
@@ -6328,8 +6330,6 @@ small {
     }
 }
 
-
-
 html, body {
 margin: 0;
 padding: 0;
@@ -6356,7 +6356,7 @@ padding: 0 15px;
 .read-more-btn{
 margin-top:15px;
 padding:10px 20px;
-background:#0b3d91;
+background:#1F3A5F;
 color:#fff;
 border:none;
 border-radius:6px;
@@ -6366,14 +6366,14 @@ transition:0.3s;
 }
 
 .read-more-btn:hover{
-background:#ff9800;
+background:#F4A623;
 transform:translateY(-2px);
 }
 .read-more-btn{
 display:inline-block;
 margin-top:15px;
 padding:10px 20px;
-background:#0b3d91;
+background:#1F3A5F;
 color:#fff;
 border-radius:6px;
 text-decoration:none;
@@ -6382,7 +6382,7 @@ transition:0.3s;
 }
 
 .read-more-btn:hover{
-background:#ff9800;
+background:#F4A623;
 transform:translateY(-2px);
 }
 .leader-placeholder{
@@ -6397,7 +6397,7 @@ border-radius:10px;
 
 .leader-placeholder i{
 font-size:60px;
-color:#0b3d91;
+color:#1F3A5F;
 }
 .leader-image{
 position:relative;
@@ -6427,7 +6427,7 @@ justify-content:center;
 
 .leader-placeholder i{
 font-size:60px;
-color:#0b3d91;
+color:#1F3A5F;
 }
 
 /* ============================================================
@@ -6490,7 +6490,7 @@ color:#0b3d91;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: 50%;
     font-size: var(--font-size-xl);
@@ -6499,11 +6499,11 @@ color:#0b3d91;
 }
 
 .profile-badge.advisor {
-    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    background: linear-gradient(135deg, #1FA6A0, #5CC4BE);
 }
 
 .profile-badge.coo {
-    background: linear-gradient(135deg, #10b981, #34d399);
+    background: linear-gradient(135deg, #5CC4BE, #1FA6A0);
 }
 
 .profile-info {
@@ -6513,7 +6513,7 @@ color:#0b3d91;
 .profile-role {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     font-size: var(--font-size-xs);
     font-weight: var(--font-semibold);
@@ -6810,7 +6810,7 @@ color:#0b3d91;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(135deg, var(--primary-color), var(--teal-color));
     color: var(--white);
     border-radius: var(--radius-lg);
     font-size: var(--font-size-xl);
@@ -6867,11 +6867,11 @@ color:#0b3d91;
 }
 
 .vision-quote.advisor-quote {
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    background: linear-gradient(135deg, #1FA6A0, #0D7F7A);
 }
 
 .vision-quote.coo-quote {
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: linear-gradient(135deg, #5CC4BE, #1FA6A0);
 }
 
 /* Achievements List */
@@ -6913,7 +6913,7 @@ color:#0b3d91;
 }
 
 .experience-card.education-card {
-    border-left-color: #10b981;
+    border-left-color: #5CC4BE;
     grid-column: span 2;
 }
 
@@ -6939,7 +6939,7 @@ color:#0b3d91;
 .experience-icon.airtel { color: #ED1C24; }
 .experience-icon.snapdeal { color: #E40046; }
 .experience-icon.zomato { color: #E23744; }
-.experience-icon.education { color: #10b981; }
+.experience-icon.education { color: #1FA6A0; }
 
 .experience-type {
     font-size: var(--font-size-xs);
@@ -6970,9 +6970,9 @@ color:#0b3d91;
 .entrepreneur-badge {
     margin-top: var(--spacing-lg);
     padding: var(--spacing-lg);
-    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    background: linear-gradient(135deg, #e6fafa, #b8efee);
     border-radius: var(--radius-xl);
-    border: 2px solid #f59e0b;
+    border: 2px solid #1FA6A0;
 }
 
 .entrepreneur-badge .badge-content {
@@ -6987,7 +6987,7 @@ color:#0b3d91;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f59e0b;
+    background: #1FA6A0;
     color: var(--white);
     border-radius: 50%;
     font-size: var(--font-size-xl);
@@ -6996,13 +6996,13 @@ color:#0b3d91;
 .entrepreneur-badge .badge-text h4 {
     font-size: var(--font-size-base);
     font-weight: var(--font-semibold);
-    color: #92400e;
+    color: #0D5450;
     margin-bottom: var(--spacing-xs);
 }
 
 .entrepreneur-badge .badge-text p {
     font-size: var(--font-size-sm);
-    color: #b45309;
+    color: #1FA6A0;
     margin: 0;
 }
 
