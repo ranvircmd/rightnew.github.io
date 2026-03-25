@@ -778,7 +778,7 @@ function setupServiceCards() {
 function redirectToWhatsApp(serviceName) {
     const phone = '919350802001';
     const message = encodeURIComponent(
-        `Hello Kreatal Mocean!\n\nI'm interested in enrolling for: ${serviceName}\n\nPlease provide more details about this program.\n\nThank you!`
+        `Hello RIGHTNEW!\n\nI'm interested in enrolling for: ${serviceName}\n\nPlease provide more details about this program.\n\nThank you!`
     );
     const whatsappURL = `https://wa.me/${phone}?text=${message}`;
     window.open(whatsappURL, '_blank');
