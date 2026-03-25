@@ -220,91 +220,107 @@
     </header>
 
     <!-- ========== HERO SECTION ========== -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-overlay"></div>
-            <div class="hero-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-            </div>
+   <section class="hero" id="hero">
+    <!-- Background Layers -->
+    <div class="hero-bg">
+        <div class="bg-noise"></div>
+        <div class="bg-glow glow-1"></div>
+        <div class="bg-glow glow-2"></div>
+        <div class="bg-lines">
+            <span></span><span></span><span></span><span></span><span></span>
         </div>
-        
-        <div class="hero-container">
-            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-                <div class="hero-badge">
-                    <i class="fas fa-award"></i>
-                    <span>NEP 2020 Aligned Programs</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    Empowering Students Through
-                    <span class="highlight">Industry Learning</span>
-                </h1>
-                
-                <p class="hero-subtitle">
-                    Bridging Academia, Industry and Society through internships and skill development programs aligned with NEP 2020.
-                </p>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
-                        <span class="stat-label">Students Trained</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
-                        <span class="stat-label">Partner Organizations</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="15">0</span><span class="stat-suffix">+</span>
-                        <span class="stat-label">Programs Offered</span>
-                    </div>
-                </div>
-                
-                <div class="hero-buttons">
-                    <a href="contact.html#apply" class="btn btn-primary btn-lg">
-                        <i class="fas fa-graduation-cap"></i>
-                        Apply for Internship
-                    </a>
-                    <a href="partner.html#partner-form" class="btn btn-outline btn-lg">
-                        <i class="fas fa-handshake"></i>
-                        Partner With Us
-                    </a>
-                </div>
-                
-             <div class="hero-trust">
-                   <span class="trust-text"></span>
-                    <div class="trust-logos">
-                        <img src="images/partners/partner-1.png" alt="" loading="lazy">
-                        <img src="images/partners/partner-2.png" alt="" loading="lazy">
-                        <img src="images/partners/partner-3.png" alt="" loading="lazy">
-                    </div>
-                </div> 
-            </div>
-            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                <div class="hero-image-wrapper">
-                    <img src="images/hero-image.png" alt="" class="hero-image">
-                    <div class="floating-card card-1">
-                        <i class="fas fa-certificate"></i>
-                        <span>Certified Programs</span>
-                    </div>
-                    <div class="floating-card card-2">
-                        <i class="fas fa-briefcase"></i>
-                        <span>Industry Ready</span>
-                    </div>
-                    <div class="floating-card card-3">
-                        <i class="fas fa-users"></i>
-                        <span>Expert Mentors</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <a href="#about" class="scroll-indicator" aria-label="Scroll to next section">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-    </section>
+    </div>
 
+    <!-- Floating Geometric Decorations -->
+    <div class="hero-geo geo-ring"></div>
+    <div class="hero-geo geo-cross"></div>
+    <div class="hero-geo geo-dots"></div>
+
+    <!-- Main Content -->
+    <div class="hero-inner">
+
+        <!-- Top Row: Badge + Mini Nav -->
+        <div class="hero-toprow">
+            <div class="hero-pill">
+                <span class="pill-dot"></span>
+                <span>NEP 2020 Aligned</span>
+            </div>
+            <div class="hero-mini-links">
+                <a href="contact.html#apply">Apply Now</a>
+                <span class="link-sep">/</span>
+                <a href="partner.html#partner-form">Partner With Us</a>
+            </div>
+        </div>
+
+        <!-- Center: Giant Headline -->
+        <div class="hero-center">
+            <h1 class="hero-headline">
+                <span class="line line-1" data-text="Empowering">Empowering</span>
+                <span class="line line-2">Students Through</span>
+                <span class="line line-3">
+                    <span class="line-highlight">Industry</span>
+                    Learning
+                </span>
+            </h1>
+
+            <div class="hero-center-bottom">
+                <p class="hero-para">
+                    Bridging Academia, Industry and Society through
+                    internships and skill development programs aligned
+                    with NEP 2020.
+                </p>
+                <a href="contact.html#apply" class="hero-main-btn">
+                    <span class="btn-text">Start Your Journey</span>
+                    <span class="btn-arrow-wrap">
+                        <svg class="btn-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="hero-stats-row">
+            <div class="h-stat">
+                <span class="h-stat-num" data-count="500">0</span>
+                <span class="h-stat-plus">+</span>
+                <span class="h-stat-text">Students<br>Trained</span>
+            </div>
+            <div class="h-stat">
+                <span class="h-stat-num" data-count="10">0</span>
+                <span class="h-stat-plus">+</span>
+                <span class="h-stat-text">Partner<br>Organizations</span>
+            </div>
+            <div class="h-stat">
+                <span class="h-stat-num" data-count="15">0</span>
+                <span class="h-stat-plus">+</span>
+                <span class="h-stat-text">Programs<br>Offered</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Marquee Ticker -->
+    <div class="hero-ticker">
+        <div class="ticker-track">
+            <div class="ticker-content">
+                <span class="ticker-item"><span class="ticker-star">★</span> Certified Programs</span>
+                <span class="ticker-item"><span class="ticker-star">★</span> Industry Ready</span>
+                <span class="ticker-item"><span class="ticker-star">★</span> Expert Mentors</span>
+                <span class="ticker-item"><span class="ticker-star">★</span> NEP 2020 Aligned</span>
+                <span class="ticker-item"><span class="ticker-star">★</span> Skill Development</span>
+                <span class="ticker-item"><span class="ticker-star">★</span> Certified Programs</span>
+                <span class="ticker-item"><span class="ticker-star">★</span> Industry Ready</span>
+                <span class="ticker-item"><span class="ticker-star">★</span> Expert Mentors</span>
+                <span class="ticker-item"><span class="ticker-star">★</span> NEP 2020 Aligned</span>
+                <span class="ticker-item"><span class="ticker-star">★</span> Skill Development</span>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- ========== ABOUT SECTION ========== -->
     <section class="about section" id="about">
         <div class="container">
