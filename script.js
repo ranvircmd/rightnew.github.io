@@ -1122,3 +1122,72 @@ window.KreatalMocean = {
     validateForm,
     closeMobileMenu
 };
+// ============================================================
+// COUNTER — Counts from 0 to data-count value
+// ============================================================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const counters = document.querySelectorAll('.h-stat-num[data-count]');
+
+    // ---- Counter Function ----
+    function animateCounter(el) {
+        const target = parseInt(el.getAttribute('data-count'), 10);
+        const duration = 2000; // 2 seconds
+        const startTime = performance.now();
+
+        function easeOutQuart(t) {
+            return 1 - Math.pow(1 - t, 4);
+        }
+
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeOutQuart(progress);
+            const currentValue = Math.floor(easedProgress * target);
+
+            el.textContent = currentValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                el.textContent = target;
+            }
+        }
+
+        requestAnimationFrame(update);
+    }
+
+    // ---- Intersection Observer ----
+    // Counter starts ONLY when stats become visible on screen
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3
+    };
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                const statsInside = entry.target.querySelectorAll('.h-stat-num[data-count]');
+                statsInside.forEach(function (counter) {
+                    // Prevent counting again if already counted
+                    if (!counter.classList.contains('counted')) {
+                        counter.classList.add('counted');
+                        animateCounter(counter);
+                    }
+                });
+                // Stop observing after animation
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe the stats row container
+    const statsRow = document.querySelector('.hero-stats-row');
+    if (statsRow) {
+        observer.observe(statsRow);
+    }
+
+});
