@@ -687,8 +687,8 @@ async function handleFormSubmit(event) {
 function getScriptURL(formType) {
     // Replace these with your actual Google Apps Script deployment URLs
     const urls = {
-        contact: 'https://script.google.com/macros/s/AKfycbw7qxngtUZep3LjlhQWMs8QSLsHMhlNsRk3d2iekPhG5hi6lzlVd8-GWYwquoPdT1BPcQ/exec',
-        internship: 'https://script.google.com/macros/s/AKfycbw7qxngtUZep3LjlhQWMs8QSLsHMhlNsRk3d2iekPhG5hi6lzlVd8-GWYwquoPdT1BPcQ/exec'
+        contact: 'https://script.google.com/macros/s/AKfycbwXBNts-NKRLo7_foR-soHEti7HOPXxDAJLQTzvAZhjm8FlfX7cJWQAul1PIhlN0bsH/exec',
+        internship: 'https://script.google.com/macros/s/AKfycbwXBNts-NKRLo7_foR-soHEti7HOPXxDAJLQTzvAZhjm8FlfX7cJWQAul1PIhlN0bsH/exec'
     };
     return urls[formType] || urls.contact;
 }
